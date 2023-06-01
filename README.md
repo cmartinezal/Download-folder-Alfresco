@@ -23,3 +23,13 @@ To execute the project open the terminal and go to the project folder. Then exec
 ```sh
 python3 download_folder_alfresco.py
 ```
+
+### Example
+This is the folder in Alfresco to download:
+
+<img width="653" alt="Screenshot 2023-06-01 at 17 27 13" src="https://github.com/cmartinezal/Download-folder-Alfresco/assets/84383847/b895925c-4c22-4228-a6c9-13fb2d2ec2c4">
+
+Program output:
+
+<img width="472" alt="Screenshot 2023-06-01 at 17 30 47" src="https://github.com/cmartinezal/Download-folder-Alfresco/assets/84383847/ce17cf47-ea37-4ebc-be1c-c5c5d325215a">
+
