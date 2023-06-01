@@ -1,0 +1,11 @@
+{
+    "ALFRESCO": {
+        "URL": "http://localhost:8080/alfresco/api/-default-/public",
+        "DOWNLOADS_ENDPOINT": "/alfresco/versions/1/downloads/",
+        "API_USER": "admin",
+        "API_PASS": "admin",
+        "FOLDER_NAME": "alfresco_folder",
+        "DOWNLOAD_FOLDER_PATH": "./",
+        "TIMEOUT": 30
+    }
+}
