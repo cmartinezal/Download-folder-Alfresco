@@ -10,6 +10,11 @@ def download_alfresco_folder():
     try:
         print(f'Obtaining Alfresco folders...')
         folders = utils.get_folders()
+
+        if not folders:
+            print(f'Error obtaining Alfresco folders', 'critical')
+            return
+
         folder_num = 1
         total_folders = len(folders)
 
