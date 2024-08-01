@@ -30,15 +30,8 @@ def format_response(status_code, response):
     return {'status_code': status_code, 'response': response}
 
 
-def delete_zip_file(file_name):
-    """Delete zip file"""
-    if os.path.exists(file_name):
-        os.remove(file_name)
-    print(f'Deleting file {file_name}')
-
-
-def extract_zip_content(zip_content, folder_num):
-    """Extract all contents of zip file"""
+def save_zip_file(zip_content, folder_num):
+    """Save contents in a zip file"""
     alfresco_config = get_alfresco_config()
     file_name = f"{alfresco_config['FOLDER_NAME']}_{folder_num}.zip"
     folder_name = f"{alfresco_config['DOWNLOAD_FOLDER_PATH']}_{file_name}"
@@ -87,7 +80,7 @@ def get_request(url, payload, is_stream=False, folder_num=0):
     if not is_stream:
         data = evaluate_response(response.status_code, response.json())
     else:
-        extract_zip_content(response.content, folder_num)
+        save_zip_file(response.content, folder_num)
         data = evaluate_response(response.status_code, {})
 
     return data
@@ -122,6 +115,7 @@ def get_folders():
         f'{num_folders} folders where found with name {alfresco_config["FOLDER_NAME"]}')
 
     folders = response["response"]["results"]
+
     return folders
 
 
